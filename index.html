@@ -7,62 +7,73 @@
     <title>Emotion Toggler</title>
     <style>
         body {
-            background-color: #FFE53B;
-            background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
             min-height: 100vh;
         }
-        .heading{
+
+        .heading {
             text-align: center;
             color: #fff;
         }
-        .container{
+
+        .container {
             background-color: #fff;
-            width: 400px;
+            width: 450px;
             display: block;
             margin: 10px auto;
             padding: 20px;
             border-radius: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, .1);            
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
         }
-        .emoji{
+
+        .emoji {
             width: 200px;
             display: block;
             margin: 10px auto;
         }
-        .btn-container{
+
+        .btn-container {
             display: flex;
             justify-content: center;
             margin-top: 20px;
         }
-        .btn{
+
+        .btn {
             font-size: 20px;
             padding: 5px 20px;
-            background-color: #fff;
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+            color: #fff;
             border-radius: 50px;
             border: none;
             margin: 0 15px;
             cursor: pointer;
         }
-        .btn:hover{
-            background-color: red;
-            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-        }
 
+        .btn:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        }
     </style>
 </head>
 
 <body>
     <h1 class="heading">Emotion Toggle</h1>
     <div class="container">
-        <img src="./png/happiness.png" class="emoji" alt="Image not found" />
+        <img src="./png/happy.gif" class="emoji" alt="Image not found" id="emoji" />
     </div>
     <div class="btn-container">
-        <button class="btn">Happy</button>
-        <button class="btn">Sad</button>
-        <button class="btn">Angry</button>
-        <button class="btn">Cry</button>        
+        <button class="btn" onclick="toggle('happy')">Happy</button>
+        <button class="btn" onclick="toggle('sad')">Sad</button>
+        <button class="btn" onclick="toggle('angry')">Angry</button>
+        <button class="btn" onclick="toggle('surprised')">Surprised </button>
     </div>
-
+    
+    <script>
+        function toggle(action) {
+            document.getElementById("emoji").src = `./png/${action}.gif `;
+        }
+    </script>
 </body>
-
 </html>
