@@ -36,6 +36,8 @@
         .btn-container {
             display: flex;
             justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
             margin-top: 20px;
         }
 
@@ -48,12 +50,22 @@
             color: #fff;
             border-radius: 50px;
             border: none;
-            margin: 0 15px;
+            margin:  20px;
             cursor: pointer;
         }
 
         .btn:hover {
             box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        }
+        @media screen and (max-width: 600px) {
+            .container{
+                width: 80%;
+            }
+            .btn-container {
+                justify-content: space-around;
+                align-items: center;
+            }
+
         }
     </style>
 </head>
@@ -69,7 +81,7 @@
         <button class="btn" onclick="toggle('angry')">Angry</button>
         <button class="btn" onclick="toggle('surprised')">Surprised </button>
     </div>
-    
+
     <script>
         function toggle(action) {
             document.getElementById("emoji").src = `./png/${action}.gif `;
