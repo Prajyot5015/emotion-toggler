@@ -22,12 +22,30 @@
             margin: 10px auto;
             padding: 20px;
             border-radius: 20px;
-            
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);            
         }
         .emoji{
             width: 200px;
             display: block;
             margin: 10px auto;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .btn{
+            font-size: 20px;
+            padding: 5px 20px;
+            background-color: #fff;
+            border-radius: 50px;
+            border: none;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: red;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
         }
 
     </style>
@@ -38,7 +56,12 @@
     <div class="container">
         <img src="./png/happiness.png" class="emoji" alt="Image not found" />
     </div>
-    
+    <div class="btn-container">
+        <button class="btn">Happy</button>
+        <button class="btn">Sad</button>
+        <button class="btn">Angry</button>
+        <button class="btn">Cry</button>        
+    </div>
 
 </body>
 
